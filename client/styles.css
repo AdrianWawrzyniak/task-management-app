@@ -1,0 +1,253 @@
+/* sekcja auth znajdujaca sie w sekcji login-section*/
+.auth-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 1rem;
+}
+
+.auth-container input {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.auth-container button {
+  width: 100%;
+}
+
+
+
+/* Cała sekcja body*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+
+
+/* sekcja nstylizacji nagłówka*/ 
+header {
+  background: #007bff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
+/* główny kontener*/
+main {
+  padding: 1rem;
+}
+  
+
+/* używane w formularzach logowania, rejestracji, nowych zadań */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+  
+
+/* wszystkie pola formularzy, przyciski*/
+input, textarea, select, button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+  
+button {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+  
+button:hover {
+  background: #0056b3;
+}
+  
+
+/* ukrywanie i pokazywanie dynamicznie*/
+.hidden {
+  display: none;
+}
+  
+
+
+/* stylizacja nagłówka Task management app */
+#main-header {
+  display: flex;
+  justify-content: center; /* Wyrównaj wszystkie elementy na środku */
+  align-items: center; /* Wycentruj w pionie */
+  padding: 2rem 2rem;
+  background: #007bff; /* Tło niebieskie */
+  color: white;
+  position: fixed; /* Przyklejenie nagłówka do góry */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Zapewnij widoczność na wierzchu */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+}
+
+#main-header h1 {
+  margin: 0;
+  font-size: 3rem;
+  position: absolute; /* Wyrównanie napisu na środku */
+  left: 50%;
+  transform: translateX(-50%);
+}
+  
+
+
+/* stylizacja przyciskuw ylogowywania */
+#logout-btn {
+  background: #3906b1; /* Czerwone tło dla widoczności */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  position: absolute; /* Ustawienie przycisku po prawej stronie */
+  right: 2rem; /* Odstęp od prawej krawędzi */
+}
+  
+#logout-btn:hover {
+  background: #6b8af1; /* Ciemniejszy czerwony po najechaniu */
+}
+  
+
+
+/* Dodawanie odstępów */
+body {
+  padding-top: 10px; /* Dostosuj w zależności od wysokości nagłówka */
+}
+
+
+
+/* Sekcja zadań */
+#tasks-section {
+  padding: 1rem;
+  height: calc(100vh - 120px); /* Wysokość okna minus header (120px) */
+  overflow-y: auto; /* Przewijanie, jeśli treść jest zbyt długa */
+  background: #f9f9f9;
+}
+
+#tasks-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Stylizacja tabeli */
+#tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+#tasks-table th,
+#tasks-table td {
+  text-align: left;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+#tasks-table th {
+  background: #007bff;
+  color: white;
+}
+
+#tasks-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+#tasks-table tr:hover {
+  background: #e6f7ff;
+}
+
+#tasks-table td {
+  max-width: 400px; /* Zwiększona szerokość */
+  max-height: 100px; /* Maksymalna wysokość opisu */
+  overflow-y: auto; /* Przewijanie w pionie dla długich opisów */
+  word-wrap: break-word; /* Łamanie długich słów */
+  white-space: normal; /* Pozwala na wielowierszowy tekst */
+}
+#tasks-table td button.assign-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#tasks-table td button.assign-btn:hover {
+  background: #0056b3;
+}
+
+
+
+/* stylizacja przycisku delete */
+.delete-btn {
+  background: #dc3545; /* Czerwone tło */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 0.5rem; /* Odstęp od innych przycisków */
+}
+
+.delete-btn:hover {
+  background: #c82333; /* Ciemniejszy czerwony */
+}
+
+
+
+
+/* stylizacja alertu przy rejestracji*/
+#login-message, #register-message {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#login-message.success, #register-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+#login-message.error, #register-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+
+
+/* ukrywanie sekcji*/
+.hidden {
+  display: none;
+}
+
+
